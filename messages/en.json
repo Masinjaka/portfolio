@@ -1,0 +1,59 @@
+{
+  "navigation": {
+    "projects": "Projects",
+    "stack": "Stack",
+    "work": "Work",
+    "contact": "Contact",
+    "primaryLabel": "Primary navigation",
+    "mobileLabel": "Mobile navigation",
+    "downloadCv": "Download CV",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu"
+  },
+  "theme": {
+    "toggle": "Toggle color theme",
+    "light": "Switch to light mode",
+    "dark": "Switch to dark mode"
+  },
+  "languageSwitch": {
+    "label": "Change language"
+  },
+  "home": {
+    "introPrefix": "Hi, my name is",
+    "sections": {
+      "projects": "Projects",
+      "work": "Work",
+      "stack": "Stack",
+      "contact": "Contact"
+    },
+    "projectGroups": {
+      "mobile": "Mobile",
+      "web": "Web"
+    },
+    "projects": {
+      "viewDetails": "View details",
+      "viewProjectDetails": "View {name} project details"
+    }
+  },
+  "projectDetail": {
+    "notFound": "Project not found",
+    "titleSuffix": "Project",
+    "back": "Back to projects",
+    "objective": "Objective",
+    "keyFeatures": "Key Features",
+    "techStack": "Tech Stack",
+    "status": "Status",
+    "visit": "Visit project",
+    "repository": "View on GitHub"
+  },
+  "contactForm": {
+    "name": "Name",
+    "email": "Email",
+    "inquiry": "Message",
+    "sending": "Sending...",
+    "send": "Send message",
+    "sent": "Thank you for your message. I will get back to you soon.",
+    "errorFallback": "Could not send your message. Please try again.",
+    "errorDefault": "Could not send your message."
+  }
+}

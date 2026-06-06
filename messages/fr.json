@@ -1,0 +1,59 @@
+{
+  "navigation": {
+    "projects": "Projets",
+    "stack": "Stack",
+    "work": "Expérience",
+    "contact": "Contact",
+    "primaryLabel": "Navigation principale",
+    "mobileLabel": "Navigation mobile",
+    "downloadCv": "Télécharger le CV",
+    "openMenu": "Ouvrir le menu de navigation",
+    "closeMenu": "Fermer le menu de navigation"
+  },
+  "theme": {
+    "toggle": "Changer le thème",
+    "light": "Passer au mode clair",
+    "dark": "Passer au mode sombre"
+  },
+  "languageSwitch": {
+    "label": "Changer de langue"
+  },
+  "home": {
+    "introPrefix": "Bonjour, je m'appelle",
+    "sections": {
+      "projects": "Projets",
+      "work": "Expérience",
+      "stack": "Stack",
+      "contact": "Contact"
+    },
+    "projectGroups": {
+      "mobile": "Mobile",
+      "web": "Web"
+    },
+    "projects": {
+      "viewDetails": "Voir le détail",
+      "viewProjectDetails": "Voir le détail du projet {name}"
+    }
+  },
+  "projectDetail": {
+    "notFound": "Projet introuvable",
+    "titleSuffix": "Projet",
+    "back": "Retour aux projets",
+    "objective": "Objectif",
+    "keyFeatures": "Fonctionnalités clés",
+    "techStack": "Stack technique",
+    "status": "Statut",
+    "visit": "Visiter le projet",
+    "repository": "Voir sur GitHub"
+  },
+  "contactForm": {
+    "name": "Nom",
+    "email": "Email",
+    "inquiry": "Message",
+    "sending": "Envoi...",
+    "send": "Envoyer le message",
+    "sent": "Merci pour votre message. Je vous répondrai bientôt.",
+    "errorFallback": "Impossible d'envoyer votre message. Veuillez réessayer.",
+    "errorDefault": "Impossible d'envoyer votre message."
+  }
+}

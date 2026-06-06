@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@source "../components/**/*.{ts,tsx}";
+@source "../app/**/*.{ts,tsx}";
+@source "../content/**/*.{ts,tsx}";
+
+@theme inline {
+  --color-background: #ffffff;
+  --color-foreground: #111111;
+  --font-sans: "Avenir Next", "Segoe UI", sans-serif;
+  --font-mono: "SFMono-Regular", "Menlo", monospace;
+}
+
+@theme {
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --page-padding: 1.35rem;
+}
+
+@utility container {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 75rem;
+  padding-inline: var(--page-padding);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --page-padding: 4rem;
+  }
+}
+
+@layer base {
+  :root {
+    --seera-grain-texture: url("/images/seera-noise.png");
+    --seera-grain-size: 161px;
+    --seera-grain-opacity: 0.04;
+    --surface-white: #ffffff;
+    --surface-muted: #ffffff;
+    --surface-dark: #09090b;
+    --surface-dark-muted: #09090b;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #111111;
+    font-family: "Avenir Next", "Segoe UI", sans-serif;
+  }
+
+  html.dark body {
+    background-color: #09090b;
+    color: #fafafa;
+  }
+
+  p,
+  li,
+  dd,
+  dt {
+    @apply text-[21px] leading-10 text-black dark:text-zinc-300;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:hover {
+    @apply underline decoration-zinc-300 underline-offset-4;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-black dark:text-zinc-50;
+  }
+
+  ::selection {
+    background: #e7e7e2;
+  }
+
+  html.dark ::selection {
+    background: #3f3f46;
+  }
+
+  ::view-transition-image-pair(root) {
+    isolation: auto;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+    display: block;
+  }
+
+  html.theme-ripple-transition::view-transition-old(root) {
+    z-index: 0;
+  }
+
+  html.theme-ripple-transition::view-transition-new(root) {
+    z-index: 1;
+    clip-path: circle(0px at var(--theme-ripple-x) var(--theme-ripple-y));
+  }
+
+}
+
+@layer components {
+  .seera-grain-surface {
+    position: relative;
+    isolation: isolate;
+    background-color: var(--surface-color);
+  }
+
+  .seera-grain-surface::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: inherit;
+    background-image: var(--seera-grain-texture);
+    background-repeat: repeat;
+    background-size: var(--seera-grain-size) var(--seera-grain-size);
+    mix-blend-mode: multiply;
+    opacity: var(--seera-grain-opacity);
+  }
+
+  .seera-grain-surface > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .dark .seera-grain-surface::before {
+    mix-blend-mode: screen;
+    opacity: 0.034;
+  }
+
+  .seera-grain-surface-white {
+    --surface-color: var(--surface-white);
+  }
+
+  .seera-grain-surface-muted {
+    --surface-color: var(--surface-muted);
+  }
+
+  html:not(.dark) .seera-grain-surface-muted {
+    background-color: #ffffff;
+  }
+
+  .dark .seera-grain-surface-white {
+    --surface-color: var(--surface-dark);
+  }
+
+  .dark .seera-grain-surface-muted {
+    --surface-color: var(--surface-dark-muted);
+    background-color: var(--surface-dark-muted);
+  }
+
+  .section {
+    @apply scroll-mt-24 py-8 sm:py-10;
+  }
+
+  .section-title {
+    @apply mb-4 font-mono text-[11px] uppercase tracking-[0.24em] text-zinc-400;
+  }
+
+  .muted-link {
+    @apply text-black transition hover:text-black dark:text-zinc-400 dark:hover:text-zinc-50;
+  }
+
+  .pill {
+    @apply text-base text-black dark:text-zinc-400;
+  }
+
+  .split-section {
+    @apply grid gap-12 sm:gap-16 lg:grid-cols-[140px_1fr] lg:items-start lg:gap-24;
+  }
+}
