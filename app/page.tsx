@@ -230,9 +230,9 @@ function Projects({
   projects: PortfolioContent["projects"];
   messages: HomeMessages;
 }) {
-  const projectCardSize = "h-24 w-full max-w-full sm:w-auto";
-  const projectImageSize = "w-24";
-  const projectPanelSize = "min-w-0 flex-1 sm:w-48 sm:flex-none";
+  const projectCardSize = "h-[6.5rem] w-full max-w-full sm:w-auto";
+  const projectImageSize = "w-[6.5rem]";
+  const projectPanelSize = "min-w-0 flex-1 sm:w-52 sm:flex-none";
   const projectGroups = [
     {
       title: messages.projectGroups.mobile,
@@ -336,12 +336,12 @@ function Contact({
               rel="noreferrer"
               className="inline-flex items-center gap-3 text-black dark:text-zinc-50"
             >
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-zinc-200 bg-white p-2 shadow-sm shadow-zinc-200/60 dark:border-zinc-800 dark:bg-zinc-950 dark:shadow-black/20">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-zinc-200 bg-white p-2.5 shadow-sm shadow-zinc-200/60 dark:border-zinc-800 dark:bg-zinc-950 dark:shadow-black/20">
                 <Image
                   src="https://cdn.simpleicons.org/whatsapp/25D366"
                   alt=""
-                  width={24}
-                  height={24}
+                  width={26}
+                  height={26}
                   className="h-full w-full object-contain"
                   unoptimized
                 />
@@ -354,12 +354,12 @@ function Contact({
               href={`mailto:${profile.email}`}
               className="inline-flex items-center gap-3 text-black dark:text-zinc-50"
             >
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-zinc-200 bg-white p-2 shadow-sm shadow-zinc-200/60 dark:border-zinc-800 dark:bg-zinc-950 dark:shadow-black/20">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-zinc-200 bg-white p-2.5 shadow-sm shadow-zinc-200/60 dark:border-zinc-800 dark:bg-zinc-950 dark:shadow-black/20">
                 <Image
                   src="https://cdn.simpleicons.org/gmail/EA4335"
                   alt=""
-                  width={24}
-                  height={24}
+                  width={26}
+                  height={26}
                   className="h-full w-full object-contain"
                   unoptimized
                 />

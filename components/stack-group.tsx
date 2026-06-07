@@ -77,12 +77,12 @@ export function StackGroup({ storageKey, title, items }: StackGroupProps) {
           <ul className="mt-4 flex list-none flex-wrap gap-3">
             {items.map((item) => (
               <li key={item.name} className="flex flex-col items-center gap-2">
-                <span className="flex h-10 w-10 items-center justify-center rounded-2xl border border-zinc-200 bg-white p-2 shadow-sm shadow-zinc-200/60 dark:border-zinc-800 dark:bg-zinc-950 dark:shadow-black/20">
+                <span className="flex h-11 w-11 items-center justify-center rounded-2xl border border-zinc-200 bg-white p-2.5 shadow-sm shadow-zinc-200/60 dark:border-zinc-800 dark:bg-zinc-950 dark:shadow-black/20">
                   <Image
                     src={item.icon}
                     alt=""
-                  width={24}
-                  height={24}
+                  width={26}
+                  height={26}
                     className="h-full w-full object-contain"
                     unoptimized
                   />
