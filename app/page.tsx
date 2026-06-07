@@ -230,9 +230,9 @@ function Projects({
   projects: PortfolioContent["projects"];
   messages: HomeMessages;
 }) {
-  const projectCardSize = "h-[6.5rem] w-full max-w-full sm:w-auto";
-  const projectImageSize = "w-[6.5rem]";
-  const projectPanelSize = "min-w-0 flex-1 sm:w-52 sm:flex-none";
+  const projectCardSize = "h-20 w-full max-w-full sm:w-auto";
+  const projectImageSize = "w-20";
+  const projectPanelSize = "min-w-0 flex-1 sm:w-40 sm:flex-none";
   const projectGroups = [
     {
       title: messages.projectGroups.mobile,
@@ -255,7 +255,7 @@ function Projects({
             <h2 className="text-xl font-medium tracking-[-0.03em] text-black dark:text-zinc-50">
               {group.title}
             </h2>
-            <div className="mt-4 flex flex-wrap justify-center gap-3 sm:justify-start sm:gap-4">
+            <div className="mt-4 flex flex-wrap justify-center gap-2.5 sm:justify-start sm:gap-3">
               {group.items.map((project) => (
                 <Link
                   key={project.slug}
@@ -264,35 +264,35 @@ function Projects({
                     "{name}",
                     project.name
                   )}
-                  className={`group relative flex ${projectCardSize} min-w-0 items-center justify-start overflow-hidden rounded-3xl border border-zinc-200 bg-white/80 no-underline shadow-zinc-200/0 transition-[border-color,box-shadow] hover:border-zinc-300 hover:shadow-xl hover:shadow-zinc-200/70 focus-visible:border-zinc-300 focus-visible:shadow-xl focus-visible:shadow-zinc-200/70 dark:border-zinc-800 dark:bg-zinc-950/80 dark:hover:border-zinc-700 dark:hover:shadow-black/30 dark:focus-visible:border-zinc-700 dark:focus-visible:shadow-black/30`}
+                  className={`group relative flex ${projectCardSize} min-w-0 items-center justify-start overflow-hidden rounded-2xl border border-zinc-200 bg-white/80 no-underline shadow-zinc-200/0 transition-[border-color,box-shadow] hover:border-zinc-300 hover:shadow-xl hover:shadow-zinc-200/70 focus-visible:border-zinc-300 focus-visible:shadow-xl focus-visible:shadow-zinc-200/70 dark:border-zinc-800 dark:bg-zinc-950/80 dark:hover:border-zinc-700 dark:hover:shadow-black/30 dark:focus-visible:border-zinc-700 dark:focus-visible:shadow-black/30`}
                 >
                   <span
-                    className={`relative h-full ${projectImageSize} shrink-0 overflow-hidden rounded-3xl bg-white p-3 dark:bg-zinc-950`}
+                    className={`relative h-full ${projectImageSize} shrink-0 overflow-hidden rounded-2xl bg-white p-2 dark:bg-zinc-950`}
                   >
-                    <span className="relative block h-full w-full overflow-hidden rounded-xl">
+                    <span className="relative block h-full w-full overflow-hidden rounded-lg">
                       <Image
                         src={project.image}
                         alt=""
                         fill
                         className="object-cover"
-                        sizes="(min-width: 640px) 7rem, 7rem"
+                        sizes="5rem"
                       />
                     </span>
                   </span>
                   <span
-                    className={`pointer-events-none relative flex h-full ${projectPanelSize} flex-col items-start justify-center overflow-hidden py-3 pl-3 pr-4 sm:py-3 sm:pr-4`}
+                    className={`pointer-events-none relative flex h-full ${projectPanelSize} flex-col items-start justify-center overflow-hidden py-2 pl-2.5 pr-3 sm:py-2 sm:pr-3`}
                   >
                     <span className="flex w-full flex-col justify-center sm:transition sm:duration-200 sm:group-hover:-translate-y-1 sm:group-hover:opacity-0 sm:group-focus-visible:-translate-y-1 sm:group-focus-visible:opacity-0">
-                      <span className="block text-base font-semibold leading-5 tracking-[-0.02em] text-black dark:text-zinc-50 sm:text-lg sm:leading-6">
+                      <span className="block text-[0.875rem] font-semibold leading-5 tracking-[-0.02em] text-black dark:text-zinc-50 sm:text-[0.9375rem]">
                         {project.name}
                       </span>
-                      <span className="mt-2 flex min-w-0 items-center justify-between gap-3">
-                        <span className="min-w-0 flex-1 text-sm leading-5 text-zinc-700 dark:text-zinc-300">
+                      <span className="mt-1.5 flex min-w-0 items-center justify-between gap-2">
+                        <span className="min-w-0 flex-1 text-xs leading-4 text-zinc-700 dark:text-zinc-300">
                           {project.subtitle}
                         </span>
                           <span
                             aria-hidden="true"
-                            className="inline-flex shrink-0 items-center justify-center rounded-full border border-black px-2.5 py-1 text-[0.6875rem] font-semibold leading-4 text-black dark:border-zinc-100 dark:text-zinc-100 sm:hidden"
+                            className="inline-flex shrink-0 items-center justify-center rounded-full border border-black px-2 py-0.5 text-[0.625rem] font-semibold leading-4 text-black dark:border-zinc-100 dark:text-zinc-100 sm:hidden"
                           >
                             {messages.projects.viewDetails}
                           </span>
@@ -300,7 +300,7 @@ function Projects({
                     </span>
                     <span
                       aria-hidden="true"
-                      className="absolute left-3 top-1/2 hidden w-fit -translate-y-[calc(50%-0.25rem)] items-center justify-center rounded-full border border-black px-3.5 py-1.5 text-xs font-semibold leading-5 text-black opacity-0 transition duration-200 dark:border-zinc-100 dark:text-zinc-100 sm:inline-flex sm:group-hover:-translate-y-1/2 sm:group-hover:opacity-100 sm:group-focus-visible:-translate-y-1/2 sm:group-focus-visible:opacity-100"
+                      className="absolute left-2.5 top-1/2 hidden w-fit -translate-y-[calc(50%-0.25rem)] items-center justify-center rounded-full border border-black px-3 py-1 text-[0.6875rem] font-semibold leading-4 text-black opacity-0 transition duration-200 dark:border-zinc-100 dark:text-zinc-100 sm:inline-flex sm:group-hover:-translate-y-1/2 sm:group-hover:opacity-100 sm:group-focus-visible:-translate-y-1/2 sm:group-focus-visible:opacity-100"
                     >
                       {messages.projects.viewDetails}
                     </span>
