@@ -15,7 +15,7 @@ const linkedInUrl = "https://linkedin.com/in/masinjaka-andrianomentsoa";
 
 function GitHubIcon() {
   return (
-    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4.5 w-4.5 fill-current">
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4 fill-current">
       <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.53 2.87 8.37 6.84 9.73.5.09.68-.22.68-.5 0-.24-.01-1.05-.01-1.9-2.78.62-3.37-1.22-3.37-1.22-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 6.97c.85 0 1.71.12 2.51.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.95.68 1.92 0 1.39-.01 2.51-.01 2.85 0 .28.18.61.69.5A10.26 10.26 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z" />
     </svg>
   );
@@ -23,7 +23,7 @@ function GitHubIcon() {
 
 function LinkedInIcon() {
   return (
-    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4.5 w-4.5 fill-current">
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4 fill-current">
       <path d="M20.45 20.45h-3.56v-5.58c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.68H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.33 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.02H3.55V9h3.56v11.45ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0Z" />
     </svg>
   );
@@ -63,7 +63,7 @@ function StickySection({
         <div className="container">
           <div className="split-section">
             <div className="h-fit lg:sticky lg:top-[5.25rem] lg:self-start">
-              <p className="w-fit text-xl font-semibold tracking-[-0.02em] text-black dark:text-zinc-50 sm:text-2xl lg:text-3xl">
+              <p className="w-fit text-base font-semibold tracking-[-0.02em] text-black dark:text-zinc-50 sm:text-xl lg:text-2xl">
                 {title}
               </p>
             </div>
@@ -97,12 +97,12 @@ function Intro({
       <div
         className={`seera-grain-surface seera-grain-surface-white rounded-br-[2.5rem] transition-colors sm:rounded-br-[4rem] ${heroTopSpacing} ${heroBottomSpacing}`}
       >
-        <div className="container grid gap-12 sm:gap-16 lg:grid-cols-[140px_1fr] lg:items-start lg:gap-24">
+        <div className="container grid gap-12 sm:gap-16 lg:grid-cols-[8.75rem_1fr] lg:items-start lg:gap-24">
           <div className="max-w-4xl lg:order-last">
-            <h1 className="text-2xl font-semibold tracking-[-0.02em] text-black dark:text-zinc-50 sm:text-3xl lg:text-4xl">
+            <h1 className="text-xl font-semibold tracking-[-0.02em] text-black dark:text-zinc-50 sm:text-2xl lg:text-3xl">
               {introPrefix} {profile.name}
             </h1>
-            <p className="mt-4 text-2xl font-medium text-black dark:text-zinc-100">
+            <p className="mt-4 text-xl font-medium text-black dark:text-zinc-100">
               {profile.role}
             </p>
             <p className="mt-6 max-w-3xl whitespace-pre-line">
@@ -144,7 +144,7 @@ function Intro({
                 target="_blank"
                 rel="noreferrer"
                 aria-label="GitHub"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-300 bg-white text-black no-underline shadow-sm shadow-zinc-200/60 transition hover:-translate-y-0.5 hover:border-zinc-400 hover:no-underline hover:shadow-md dark:border-zinc-700 dark:bg-zinc-950 dark:text-white dark:shadow-black/25 dark:hover:border-zinc-500"
+                className="flex h-8 w-8 items-center justify-center rounded-full border border-zinc-300 bg-white text-black no-underline shadow-sm shadow-zinc-200/60 transition hover:-translate-y-0.5 hover:border-zinc-400 hover:no-underline hover:shadow-md dark:border-zinc-700 dark:bg-zinc-950 dark:text-white dark:shadow-black/25 dark:hover:border-zinc-500"
               >
                 <GitHubIcon />
               </a>
@@ -153,7 +153,7 @@ function Intro({
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-300 bg-white text-black no-underline shadow-sm shadow-zinc-200/60 transition hover:-translate-y-0.5 hover:border-zinc-400 hover:no-underline hover:shadow-md dark:border-zinc-700 dark:bg-zinc-950 dark:text-white dark:shadow-black/25 dark:hover:border-zinc-500"
+                className="flex h-8 w-8 items-center justify-center rounded-full border border-zinc-300 bg-white text-black no-underline shadow-sm shadow-zinc-200/60 transition hover:-translate-y-0.5 hover:border-zinc-400 hover:no-underline hover:shadow-md dark:border-zinc-700 dark:bg-zinc-950 dark:text-white dark:shadow-black/25 dark:hover:border-zinc-500"
               >
                 <LinkedInIcon />
               </a>
@@ -173,7 +173,7 @@ function Work({
   title: string;
 }) {
   const jobTitleClassName =
-    "text-2xl font-medium tracking-[-0.03em]";
+    "text-xl font-medium tracking-[-0.03em]";
 
   return (
     <StickySection id="work" title={title} variant="alternate">
@@ -188,7 +188,7 @@ function Work({
                 {item.role} <span className="text-zinc-400 dark:text-zinc-500">@</span>{" "}
                 {item.company}
               </h2>
-              <p className="mt-2 text-xl font-semibold leading-8 text-zinc-500 dark:text-zinc-400">
+              <p className="mt-2 text-base font-semibold leading-7 text-zinc-500 dark:text-zinc-400">
                 {item.period} · {item.location} · {item.workMode}
               </p>
               <p className="mt-2">{item.summary}</p>
@@ -230,9 +230,9 @@ function Projects({
   projects: PortfolioContent["projects"];
   messages: HomeMessages;
 }) {
-  const projectCardSize = "h-28 w-full max-w-full sm:w-auto";
-  const projectImageSize = "w-28";
-  const projectPanelSize = "min-w-0 flex-1 sm:w-56 sm:flex-none";
+  const projectCardSize = "h-24 w-full max-w-full sm:w-auto";
+  const projectImageSize = "w-24";
+  const projectPanelSize = "min-w-0 flex-1 sm:w-48 sm:flex-none";
   const projectGroups = [
     {
       title: messages.projectGroups.mobile,
@@ -252,7 +252,7 @@ function Projects({
             key={group.title}
             className={index > 0 ? "pt-8" : ""}
           >
-            <h2 className="text-2xl font-medium tracking-[-0.03em] text-black dark:text-zinc-50">
+            <h2 className="text-xl font-medium tracking-[-0.03em] text-black dark:text-zinc-50">
               {group.title}
             </h2>
             <div className="mt-4 flex flex-wrap justify-center gap-3 sm:justify-start sm:gap-4">
@@ -267,7 +267,7 @@ function Projects({
                   className={`group relative flex ${projectCardSize} min-w-0 items-center justify-start overflow-hidden rounded-3xl border border-zinc-200 bg-white/80 no-underline shadow-zinc-200/0 transition-[border-color,box-shadow] hover:border-zinc-300 hover:shadow-xl hover:shadow-zinc-200/70 focus-visible:border-zinc-300 focus-visible:shadow-xl focus-visible:shadow-zinc-200/70 dark:border-zinc-800 dark:bg-zinc-950/80 dark:hover:border-zinc-700 dark:hover:shadow-black/30 dark:focus-visible:border-zinc-700 dark:focus-visible:shadow-black/30`}
                 >
                   <span
-                    className={`relative h-full ${projectImageSize} shrink-0 overflow-hidden rounded-3xl bg-white p-4 dark:bg-zinc-950`}
+                    className={`relative h-full ${projectImageSize} shrink-0 overflow-hidden rounded-3xl bg-white p-3 dark:bg-zinc-950`}
                   >
                     <span className="relative block h-full w-full overflow-hidden rounded-xl">
                       <Image
@@ -290,17 +290,17 @@ function Projects({
                         <span className="min-w-0 flex-1 text-sm leading-5 text-zinc-700 dark:text-zinc-300">
                           {project.subtitle}
                         </span>
-                        <span
-                          aria-hidden="true"
-                          className="inline-flex shrink-0 items-center justify-center rounded-full border border-black px-3 py-1.5 text-xs font-semibold leading-4 text-black dark:border-zinc-100 dark:text-zinc-100 sm:hidden"
-                        >
-                          {messages.projects.viewDetails}
-                        </span>
+                          <span
+                            aria-hidden="true"
+                            className="inline-flex shrink-0 items-center justify-center rounded-full border border-black px-2.5 py-1 text-[0.6875rem] font-semibold leading-4 text-black dark:border-zinc-100 dark:text-zinc-100 sm:hidden"
+                          >
+                            {messages.projects.viewDetails}
+                          </span>
                       </span>
                     </span>
                     <span
                       aria-hidden="true"
-                      className="absolute left-3 top-1/2 hidden w-fit -translate-y-[calc(50%-0.25rem)] items-center justify-center rounded-full border border-black px-4 py-2 text-sm font-semibold leading-5 text-black opacity-0 transition duration-200 dark:border-zinc-100 dark:text-zinc-100 sm:inline-flex sm:group-hover:-translate-y-1/2 sm:group-hover:opacity-100 sm:group-focus-visible:-translate-y-1/2 sm:group-focus-visible:opacity-100"
+                      className="absolute left-3 top-1/2 hidden w-fit -translate-y-[calc(50%-0.25rem)] items-center justify-center rounded-full border border-black px-3.5 py-1.5 text-xs font-semibold leading-5 text-black opacity-0 transition duration-200 dark:border-zinc-100 dark:text-zinc-100 sm:inline-flex sm:group-hover:-translate-y-1/2 sm:group-hover:opacity-100 sm:group-focus-visible:-translate-y-1/2 sm:group-focus-visible:opacity-100"
                     >
                       {messages.projects.viewDetails}
                     </span>
@@ -336,12 +336,12 @@ function Contact({
               rel="noreferrer"
               className="inline-flex items-center gap-3 text-black dark:text-zinc-50"
             >
-              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm shadow-zinc-200/60 dark:border-zinc-800 dark:bg-zinc-950 dark:shadow-black/20">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-zinc-200 bg-white p-2 shadow-sm shadow-zinc-200/60 dark:border-zinc-800 dark:bg-zinc-950 dark:shadow-black/20">
                 <Image
                   src="https://cdn.simpleicons.org/whatsapp/25D366"
                   alt=""
-                  width={32}
-                  height={32}
+                  width={24}
+                  height={24}
                   className="h-full w-full object-contain"
                   unoptimized
                 />
@@ -354,12 +354,12 @@ function Contact({
               href={`mailto:${profile.email}`}
               className="inline-flex items-center gap-3 text-black dark:text-zinc-50"
             >
-              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm shadow-zinc-200/60 dark:border-zinc-800 dark:bg-zinc-950 dark:shadow-black/20">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-zinc-200 bg-white p-2 shadow-sm shadow-zinc-200/60 dark:border-zinc-800 dark:bg-zinc-950 dark:shadow-black/20">
                 <Image
                   src="https://cdn.simpleicons.org/gmail/EA4335"
                   alt=""
-                  width={32}
-                  height={32}
+                  width={24}
+                  height={24}
                   className="h-full w-full object-contain"
                   unoptimized
                 />

@@ -40,7 +40,7 @@ function MoonIcon() {
     <svg
       aria-hidden="true"
       viewBox="0 0 24 24"
-      className="h-5 w-5"
+      className="h-4.5 w-4.5"
       fill="none"
       stroke="currentColor"
       strokeWidth="1.8"
@@ -57,7 +57,7 @@ function SunIcon() {
     <svg
       aria-hidden="true"
       viewBox="0 0 24 24"
-      className="h-5 w-5"
+      className="h-4.5 w-4.5"
       fill="none"
       stroke="currentColor"
       strokeWidth="1.8"
@@ -176,7 +176,7 @@ export function ThemeToggle() {
           : t("dark")
       }
       onClick={toggleTheme}
-      className="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-300 bg-white text-black no-underline dark:border-zinc-700 dark:bg-zinc-950 dark:text-zinc-300"
+      className="flex h-8 w-8 items-center justify-center rounded-full border border-zinc-300 bg-white text-black no-underline dark:border-zinc-700 dark:bg-zinc-950 dark:text-zinc-300"
     >
       {isDark ? <SunIcon /> : <MoonIcon />}
     </button>

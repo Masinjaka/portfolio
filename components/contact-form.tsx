@@ -58,7 +58,7 @@ export function ContactForm() {
             type="text"
             required
             autoComplete="name"
-            className="rounded-3xl border border-zinc-200 bg-white px-5 py-4 text-xl text-black outline-none transition focus:border-zinc-400 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-50 dark:focus:border-zinc-600"
+            className="rounded-3xl border border-zinc-200 bg-white px-5 py-3 text-base text-black outline-none transition focus:border-zinc-400 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-50 dark:focus:border-zinc-600"
           />
         </label>
 
@@ -71,7 +71,7 @@ export function ContactForm() {
             type="email"
             required
             autoComplete="email"
-            className="rounded-3xl border border-zinc-200 bg-white px-5 py-4 text-xl text-black outline-none transition focus:border-zinc-400 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-50 dark:focus:border-zinc-600"
+            className="rounded-3xl border border-zinc-200 bg-white px-5 py-3 text-base text-black outline-none transition focus:border-zinc-400 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-50 dark:focus:border-zinc-600"
           />
         </label>
 
@@ -83,7 +83,7 @@ export function ContactForm() {
             name="inquiry"
             required
             rows={5}
-            className="resize-none rounded-3xl border border-zinc-200 bg-white px-5 py-4 text-xl leading-8 text-black outline-none transition focus:border-zinc-400 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-50 dark:focus:border-zinc-600"
+            className="resize-none rounded-3xl border border-zinc-200 bg-white px-5 py-3 text-base leading-7 text-black outline-none transition focus:border-zinc-400 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-50 dark:focus:border-zinc-600"
           />
         </label>
       </div>

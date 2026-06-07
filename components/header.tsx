@@ -66,9 +66,9 @@ export function Header() {
     return null;
   }
 
-  const profileAvatarClassName = `relative flex h-9 shrink-0 items-center overflow-hidden transition-[width,opacity,transform,margin] duration-300 ease-out ${
+  const profileAvatarClassName = `relative flex h-8 shrink-0 items-center overflow-hidden transition-[width,opacity,transform,margin] duration-300 ease-out ${
     shouldShowProfile
-      ? "mr-6 w-9 scale-100 opacity-100"
+      ? "mr-6 w-8 scale-100 opacity-100"
       : "mr-0 w-0 scale-75 opacity-0"
   }`;
 
@@ -79,13 +79,13 @@ export function Header() {
           <div className="flex items-center justify-between gap-3">
             <div className="flex min-w-0 flex-1 items-center">
               <span aria-hidden="true" className={profileAvatarClassName}>
-                <span className="relative block h-9 w-9 overflow-hidden rounded-full border border-black/10 bg-white shadow-sm shadow-zinc-200/80 dark:border-white/10 dark:bg-zinc-900 dark:shadow-black/30">
+                <span className="relative block h-8 w-8 overflow-hidden rounded-full border border-black/10 bg-white shadow-sm shadow-zinc-200/80 dark:border-white/10 dark:bg-zinc-900 dark:shadow-black/30">
                   <Image
                     src={profilePhoto}
                     alt=""
                     fill
                     className="object-cover"
-                    sizes="2.25rem"
+                    sizes="2rem"
                   />
                 </span>
               </span>
@@ -99,7 +99,7 @@ export function Header() {
                     <a
                       key={item.key}
                       href={item.href}
-                      className="text-[21px] font-normal tracking-[-0.02em] text-black no-underline dark:text-zinc-300"
+                      className="text-[1.0625rem] font-normal tracking-[-0.02em] text-black no-underline dark:text-zinc-300"
                     >
                       {t(item.key)}
                     </a>
@@ -114,7 +114,7 @@ export function Header() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={t("downloadCv")}
-                className="mr-4 inline-flex h-9 items-center justify-center rounded-full bg-[#10B981] px-3 text-sm font-semibold text-[#111816] no-underline transition hover:bg-[#0ea574] hover:no-underline sm:px-4"
+                className="mr-4 inline-flex h-8 items-center justify-center rounded-full bg-[#10B981] px-3 text-xs font-semibold text-[#111816] no-underline transition hover:bg-[#0ea574] hover:no-underline sm:px-4"
               >
                 <span className="sm:hidden">CV</span>
                 <span className="hidden sm:inline">{t("downloadCv")}</span>
@@ -129,22 +129,22 @@ export function Header() {
                   isMenuOpen ? t("closeMenu") : t("openMenu")
                 }
                 onClick={() => setIsMenuOpen((open) => !open)}
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-300 bg-white text-black no-underline dark:border-zinc-700 dark:bg-zinc-950 dark:text-zinc-300 md:hidden"
+                className="flex h-8 w-8 items-center justify-center rounded-full border border-zinc-300 bg-white text-black no-underline dark:border-zinc-700 dark:bg-zinc-950 dark:text-zinc-300 md:hidden"
               >
                 <span aria-hidden="true" className="relative h-3.5 w-4">
                   <span
                     className={`absolute left-0 top-0 h-px w-4 bg-current transition-transform ${
-                      isMenuOpen ? "translate-y-[7px] rotate-45" : ""
+                      isMenuOpen ? "translate-y-[0.4375rem] rotate-45" : ""
                     }`}
                   />
                   <span
-                    className={`absolute left-0 top-[7px] h-px w-4 bg-current transition-opacity ${
+                    className={`absolute left-0 top-[0.4375rem] h-px w-4 bg-current transition-opacity ${
                       isMenuOpen ? "opacity-0" : "opacity-100"
                     }`}
                   />
                   <span
                     className={`absolute bottom-0 left-0 h-px w-4 bg-current transition-transform ${
-                      isMenuOpen ? "-translate-y-[6px] -rotate-45" : ""
+                      isMenuOpen ? "-translate-y-[0.375rem] -rotate-45" : ""
                     }`}
                   />
                 </span>
@@ -168,7 +168,7 @@ export function Header() {
                     key={item.key}
                     href={item.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className="text-2xl font-medium tracking-[-0.03em] text-black no-underline dark:text-zinc-100"
+                    className="text-lg font-medium tracking-[-0.03em] text-black no-underline dark:text-zinc-100"
                   >
                     {t(item.key)}
                   </a>
@@ -178,7 +178,7 @@ export function Header() {
                   target="_blank"
                   rel="noreferrer"
                   onClick={() => setIsMenuOpen(false)}
-                  className="mt-2 inline-flex h-11 items-center justify-center rounded-full bg-[#10B981] px-4 text-base font-semibold text-[#111816] no-underline transition hover:bg-[#0ea574] hover:no-underline"
+                  className="mt-2 inline-flex h-8 items-center justify-center rounded-full bg-[#10B981] px-4 text-xs font-semibold text-[#111816] no-underline transition hover:bg-[#0ea574] hover:no-underline"
                 >
                   {t("downloadCv")}
                 </a>
@@ -187,7 +187,7 @@ export function Header() {
           </nav>
         </div>
       </header>
-      <div aria-hidden="true" className="h-[68px]" />
+      <div aria-hidden="true" className="h-[4.25rem]" />
     </>
   );
 }

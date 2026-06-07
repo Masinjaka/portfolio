@@ -16,19 +16,19 @@
 @theme {
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
-  --page-padding: 1.35rem;
+  --page-padding: 1.75rem;
 }
 
 @utility container {
   margin-inline: auto;
   width: 100%;
-  max-width: 75rem;
+  max-width: 62rem;
   padding-inline: var(--page-padding);
 }
 
 @media (min-width: 768px) {
   :root {
-    --page-padding: 4rem;
+    --page-padding: 7rem;
   }
 }
 
@@ -69,7 +69,7 @@
   li,
   dd,
   dt {
-    @apply text-[21px] leading-10 text-black dark:text-zinc-300;
+    @apply text-[1.0625rem] leading-8 text-black dark:text-zinc-300;
   }
 
   a {
@@ -175,7 +175,7 @@
   }
 
   .section-title {
-    @apply mb-4 font-mono text-[11px] uppercase tracking-[0.24em] text-zinc-400;
+    @apply mb-4 font-mono text-[0.6875rem] uppercase tracking-[0.24em] text-zinc-400;
   }
 
   .muted-link {
@@ -183,10 +183,10 @@
   }
 
   .pill {
-    @apply text-base text-black dark:text-zinc-400;
+    @apply text-sm text-black dark:text-zinc-400;
   }
 
   .split-section {
-    @apply grid gap-12 sm:gap-16 lg:grid-cols-[140px_1fr] lg:items-start lg:gap-24;
+    @apply grid gap-12 sm:gap-16 lg:grid-cols-[8.75rem_1fr] lg:items-start lg:gap-24;
   }
 }
