@@ -6,6 +6,11 @@ type ContactRequestBody = {
 
 const recipientEmail = "amasinjaka@gmail.com";
 
+type BrevoErrorResponse = {
+  message?: unknown;
+  code?: unknown;
+};
+
 function sanitize(value: string) {
   return value.trim().replace(/[<>]/g, "");
 }
@@ -53,46 +58,67 @@ export async function POST(request: Request) {
     );
   }
 
-  const brevoResponse = await fetch("https://api.brevo.com/v3/smtp/email", {
-    method: "POST",
-    headers: {
-      accept: "application/json",
-      "api-key": apiKey,
-      "content-type": "application/json",
-    },
-    body: JSON.stringify({
-      sender: {
-        name: senderName,
-        email: senderEmail,
+  let brevoResponse: Response;
+
+  try {
+    brevoResponse = await fetch("https://api.brevo.com/v3/smtp/email", {
+      method: "POST",
+      headers: {
+        accept: "application/json",
+        "api-key": apiKey,
+        "content-type": "application/json",
       },
-      to: [
-        {
-          email: recipientEmail,
-          name: "Masinjaka Andrianomentsoa",
+      body: JSON.stringify({
+        sender: {
+          name: senderName,
+          email: senderEmail,
         },
-      ],
-      replyTo: {
-        email,
-        name,
-      },
-      subject: `Portfolio message from ${name}`,
-      textContent: [
-        `Name: ${name}`,
-        `Email: ${email}`,
-        "",
-        "Message:",
-        inquiry,
-      ].join("\n"),
-      htmlContent: `
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Message:</strong></p>
-        <p>${inquiry.replace(/\n/g, "<br />")}</p>
-      `,
-    }),
-  });
+        to: [
+          {
+            email: recipientEmail,
+            name: "Masinjaka Andrianomentsoa",
+          },
+        ],
+        replyTo: {
+          email,
+          name,
+        },
+        subject: `Portfolio message from ${name}`,
+        textContent: [
+          `Name: ${name}`,
+          `Email: ${email}`,
+          "",
+          "Message:",
+          inquiry,
+        ].join("\n"),
+        htmlContent: `
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Message:</strong></p>
+          <p>${inquiry.replace(/\n/g, "<br />")}</p>
+        `,
+      }),
+    });
+  } catch (error) {
+    console.error("Brevo request failed", error);
+
+    return Response.json(
+      { message: "Could not send your message. Please try again later." },
+      { status: 502 }
+    );
+  }
 
   if (!brevoResponse.ok) {
+    const errorBody = (await brevoResponse.json().catch(() => null)) as
+      | BrevoErrorResponse
+      | null;
+
+    console.error("Brevo rejected contact email", {
+      status: brevoResponse.status,
+      code: errorBody?.code,
+      message: errorBody?.message,
+    });
+
     return Response.json(
       { message: "Could not send your message. Please try again later." },
       { status: 502 }
