@@ -11,8 +11,11 @@ export const profile = {
     label: "wa.me/261346431818",
     href: "https://wa.me/261346431818",
   },
-  contactBlurb:
-    "Got a real-world problem you need fixed? Let’s build the solution together. Choose the contact option that works best for you:",
+  contactBlurb: {
+    opening: "Got a real-world problem you need fixed?",
+    emphasis: "Let’s build the solution together.",
+    prompt: "Reach out to me through one of these options:",
+  },
   contactFormOption: "Or leave a message in the contact form below.",
 };
 

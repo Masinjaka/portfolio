@@ -99,8 +99,11 @@ function getLocalizedProfile(locale: Locale) {
       "Je développe des apps Flutter performantes et des produits numériques connectés.",
     summary:
       "Je développe des applications mobiles cross-platform, des applications web et des systèmes matériels embarqués. Je transforme des idées complexes en produits propres, fonctionnels et adaptés exactement à vos besoins.",
-    contactBlurb:
-      "Vous avez un problème concret à résoudre ? Construisons la solution ensemble. Choisissez le moyen de contact qui vous convient le mieux :",
+    contactBlurb: {
+      opening: "Vous avez un problème concret à résoudre ?",
+      emphasis: "Construisons la solution ensemble.",
+      prompt: "Contactez-moi via l’une de ces options :",
+    },
     contactFormOption:
       "Ou laissez un message via le formulaire de contact ci-dessous.",
   };

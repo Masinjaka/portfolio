@@ -327,7 +327,13 @@ function Contact({
   return (
     <StickySection id="contact" title={title} radius="top-right">
       <div>
-        <p className="max-w-2xl">{profile.contactBlurb}</p>
+        <p className="max-w-2xl">
+          {profile.contactBlurb.opening}{" "}
+          <strong className="font-bold text-black dark:text-zinc-50">
+            {profile.contactBlurb.emphasis}
+          </strong>
+          <span className="mt-4 block">{profile.contactBlurb.prompt}</span>
+        </p>
         <ul className="mt-8 flex list-none flex-wrap items-center gap-x-8 gap-y-5 p-0">
           <li>
             <a
