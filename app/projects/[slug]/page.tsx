@@ -58,6 +58,12 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
   const isReady = project.status === "Ready" || project.status === "Disponible";
   const repositoryUrl =
     "repositoryUrl" in project ? project.repositoryUrl : undefined;
+  const websiteUrl =
+    "websiteUrl" in project
+      ? project.websiteUrl
+      : isReady
+        ? project.url
+        : undefined;
 
   return (
     <main className="container pb-24 pt-20 sm:pt-28">
@@ -158,7 +164,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             ) : null}
           </div>
 
-          {repositoryUrl || isReady ? (
+          {repositoryUrl || websiteUrl ? (
             <div className="mt-10 flex flex-wrap items-center gap-3">
               {repositoryUrl ? (
                 <a
@@ -171,14 +177,27 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                   {messages.repository}
                 </a>
               ) : null}
-              {isReady ? (
+              {websiteUrl ? (
                 <a
-                  href={project.url}
+                  href={websiteUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex text-xl font-medium tracking-[-0.03em] text-black dark:text-zinc-50"
+                  className="inline-flex items-center gap-2 rounded-full border border-black bg-black px-5 py-3 text-base font-semibold text-white no-underline transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-zinc-200/70 dark:border-zinc-100 dark:bg-zinc-100 dark:text-black dark:hover:shadow-black/30"
                 >
                   {messages.visit}
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    className="h-4 w-4"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                  >
+                    <path d="M7 17 17 7" />
+                    <path d="M7 7h10v10" />
+                  </svg>
                 </a>
               ) : null}
             </div>

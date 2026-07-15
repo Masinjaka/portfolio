@@ -75,15 +75,16 @@ const frenchProjectTranslations: Record<string, Partial<Project>> = {
   gasydia: {
     subtitle: "Location de voiture - chauffeur et guide",
     summary:
-      "Une expérience web pour un service de location de voiture, chauffeur et guide, pensée autour d'un storytelling de voyage clair et d'une découverte simple des services.",
+      "Une expérience web React pour un service de location de voiture, chauffeur et guide, avec des contenus de voyage immersifs, des galeries et une découverte fluide des services.",
     objective:
-      "Présenter les services de location de voiture, chauffeur et guide dans une expérience web responsive qui rend les options de voyage faciles à découvrir et comparer.",
+      "Moderniser le site Spring Boot et Thymeleaf d'origine sous la forme d'une application React responsive, tout en conservant son identité visuelle, ses contenus et ses routes.",
     label: "Mission client",
-    role: "Design web et implémentation frontend",
+    role: "Migration React, architecture frontend et optimisation des performances",
     keyFeatures: [
-      "Mise en page responsive pour de grandes images de voyage et de service.",
-      "Sections de services claires pour une lecture rapide.",
-      "Navigation simple pour découvrir les offres de location, chauffeur et guide.",
+      "Routes côté client pour les services, expériences, informations sur l'entreprise, contact, témoignages et actions communautaires.",
+      "Carrousels de voyage et galeries interactives avec légendes, miniatures, compteur et zoom.",
+      "Prise en charge PWA avec mise à jour automatique du service worker et mise en cache des images à la demande.",
+      "Affichage responsive des images avec chargement différé, priorité de chargement et optimisation à la compilation.",
     ],
   },
 };
