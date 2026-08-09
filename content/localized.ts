@@ -113,7 +113,7 @@ function getLocalizedProfile(locale: Locale) {
 function getLocalizedQuickFacts(locale: Locale) {
   if (locale === "en") return quickFacts;
 
-  return ["4+ ans", "Mobile & Web", "IoT & Firmware"];
+  return ["5+ ans", "Mobile & Web", "IoT & Firmware"];
 }
 
 function getLocalizedProficiencies(locale: Locale) {
@@ -140,26 +140,46 @@ function getLocalizedExperience(locale: Locale) {
   return [
     {
       ...experience[0],
-      role: "Développeur mobile",
-      location: "Suisse",
-      workMode: "à distance",
+      period: "Février 2024 — Juin 2026",
+      role: "Développeur mobile Flutter & React Native",
+      employmentType: "Temps plein",
+      workMode: "À distance",
       summary:
-        "Développement et déploiement d'applications mobiles, collaboration avec les équipes design, backend et produit, optimisation d'apps existantes pour la performance de rendu et la réactivité, et gestion des releases iOS et Android.",
+        "Développement et déploiement de six applications mobiles en production (quatre Flutter et deux React Native), création d'interfaces complexes avec les équipes design et produit, optimisation des performances et de l'architecture, gestion des livraisons Android et iOS, et intégration d'API REST, de l'authentification et de la synchronisation des données avec les équipes backend.",
     },
     {
       ...experience[1],
-      role: "Développeur mobile & IoT",
-      location: "États-Unis",
-      workMode: "à distance",
+      period: "Novembre 2024 — Janvier 2025",
+      role: "Développeur Flutter freelance",
+      employmentType: "Temps partiel",
+      workMode: "À distance",
       summary:
-        "Développement d'applications Flutter multiplateformes pour contrôler et superviser les solutions IoT de l'entreprise, avec contribution au firmware pour des appareils connectés fiables.",
+        "Refactorisation et optimisation d'applications Flutter existantes afin d'améliorer leurs performances, leur fluidité, la stabilité du rendu, leur maintenabilité et leur évolutivité.",
     },
     {
       ...experience[2],
-      role: "Développeur logiciel & IoT",
-      workMode: "sur site",
+      period: "Septembre 2022 — Février 2024",
+      role: "Développeur mobile Flutter",
+      employmentType: "Temps plein",
+      workMode: "À distance",
       summary:
-        "Pilotage du développement d'outils desktop internes et maintenance du firmware des appareils IoT, afin d'améliorer la productivité de l'équipe et la fiabilité des appareils.",
+        "Conception et développement de deux applications Flutter Android et iOS pour piloter et superviser des dispositifs portables connectés, avec scan BLE, connexion multiappareil, contrôle à distance, suivi des données en temps réel et échanges fiables via BLE et MQTT.",
+    },
+    {
+      ...experience[3],
+      period: "Février 2022 — Décembre 2023",
+      role: "Développeur Flutter Desktop",
+      employmentType: "Temps partiel",
+      workMode: "Sur site",
+      summary:
+        "Pilotage du développement d'une application Flutter Desktop de gestion des employés et des badges RFID, incluant les interfaces, la logique métier, la persistance SQL, l'historique des pointages en temps réel et l'intégration du lecteur via BLE et MQTT.",
+    },
+    {
+      ...experience[4],
+      period: "Juillet 2021 — Maintenant",
+      role: "Développeur mobile",
+      employmentType: "Temps partiel",
+      workMode: "À distance",
     },
   ];
 }

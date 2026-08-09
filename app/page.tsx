@@ -189,9 +189,9 @@ function Work({
                 {item.company}
               </h2>
               <p className="mt-2 text-base font-semibold leading-7 text-zinc-500 dark:text-zinc-400">
-                {item.period} · {item.location} · {item.workMode}
+                {item.period} · {item.employmentType} · {item.workMode}
               </p>
-              <p className="mt-2">{item.summary}</p>
+              {item.summary ? <p className="mt-2">{item.summary}</p> : null}
             </div>
           </article>
         ))}

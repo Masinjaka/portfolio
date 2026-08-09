@@ -16,7 +16,7 @@ const navigationItems = [
 ] as const;
 
 const cvDownloadUrl =
-  "https://drive.google.com/uc?export=download&id=1RaVwiixzuxsWvBEyoQixmTRfS36g2-xm";
+  "https://drive.google.com/uc?export=download&id=14qu1B5jlfTvd1aFdtQlgF323uqf-xoAA";
 
 export function Header() {
   const t = useTranslations("navigation");

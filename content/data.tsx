@@ -19,7 +19,7 @@ export const profile = {
   contactFormOption: "Or leave a message in the contact form below.",
 };
 
-export const quickFacts = ["4+ years","Mobile & Web", "IoT & Firmware"];
+export const quickFacts = ["5+ years", "Mobile & Web", "IoT & Firmware"];
 
 export const proficiencies = {
   groups: [
@@ -375,31 +375,48 @@ export function getProjectBySlug(slug: string) {
 
 export const experience = [
   {
-    period: "2024—2026",
-    role: "Mobile Developer",
-    company: "Exponent",
-    location: "Switzerland",
-    workMode: "remote",
+    period: "February 2024 — June 2026",
+    role: "Flutter & React Native Mobile Developer",
+    company: "Exponent CH",
+    employmentType: "Full-time",
+    workMode: "Remote",
     summary:
-      "Developing and deploying mobile applications, collaborating with design, backend, and product teams, optimizing existing apps for rendering performance and responsiveness, and managing release workflows for iOS and Android stores.",
+      "Developed and deployed six production mobile apps (four Flutter and two React Native), built complex interfaces with design and product teams, improved performance through refactoring and architectural work, managed Android and iOS delivery workflows, and integrated REST APIs, authentication, and data synchronization with backend teams.",
   },
   {
-    period: "2022—2024",
-    role: "Mobile & IoT Developer",
+    period: "November 2024 — January 2025",
+    role: "Freelance Flutter Developer",
+    company: "French4Dev",
+    employmentType: "Part-time",
+    workMode: "Remote",
+    summary:
+      "Refactored and optimized existing Flutter applications to improve performance, fluidity, rendering stability, maintainability, and scalability.",
+  },
+  {
+    period: "September 2022 — February 2024",
+    role: "Flutter Mobile Developer",
     company: "Tentron Technologies",
-    location: "United States",
-    workMode: "remote",
+    employmentType: "Full-time",
+    workMode: "Remote",
     summary:
-      "Built cross-platform Flutter applications for controlling and monitoring the company’s IoT solutions, while contributing firmware for reliable connected-device operation.",
+      "Designed and developed two Android and iOS Flutter apps for controlling and monitoring connected wearable devices, including BLE scanning, multi-device connections, remote control, real-time data tracking, and reliable BLE and MQTT communication.",
   },
   {
-    period: "2022—2023",
-    role: "Software & IoT Developer",
+    period: "February 2022 — December 2023",
+    role: "Flutter Desktop Developer",
     company: "Smart Teknolojia",
-    location: "Fianarantsoa",
-    workMode: "on-site",
+    employmentType: "Part-time",
+    workMode: "On-site",
     summary:
-      "Led development of internal desktop tools and maintained firmware for IoT devices, improving team productivity and device reliability.",
+      "Led the development of a Flutter Desktop employee-management and RFID badge application, building its interfaces, business logic, SQL persistence, real-time attendance history, and BLE and MQTT reader integration.",
+  },
+  {
+    period: "July 2021 — Present",
+    role: "Mobile Developer",
+    company: "Freelance",
+    employmentType: "Part-time",
+    workMode: "Remote",
+    summary: "",
   },
 ];
 
